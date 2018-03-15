@@ -1,0 +1,54 @@
+html {
+  margin: 0;
+
+}
+
+body {
+  background-color: #778899;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+h1, button {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+button {
+ background-color: #ff7256;
+ color: #ffffff;
+ border: 1px solid #f3745b;
+ border-radius: 0.15em;
+ padding: 1em 2em;
+ font-size: 20px; 
+ box-shadow: 2px 2px 1px #2f4f4f;
+ margin:  0px 5px;
+ outline: 0;
+ text-align: center;
+
+ overflow: hidden;
+ position: relative;
+}
+
+/* Styles the created class of ripple*/
+button .ripple {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  animation: ripple 0.7s linear;
+  transform: scale(0); /*cannot see the circle intially*/
+}
+
+/* Then with keyframes we transform it to grow from nothing to a circle giving it a 
+popping effect. Opacity makes the circle disappear*/
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+
+
